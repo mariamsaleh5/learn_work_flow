@@ -1,5 +1,5 @@
 name: git hub actions
-on:push
+on: push
 jops:
     first jop:
         runs-on:ubuntu-latest
