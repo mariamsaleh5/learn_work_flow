@@ -1,0 +1,15 @@
+name: git hub actions
+on:push
+jops:
+    first jop:
+        runs-on:ubuntu-latest
+        steps:
+            - name:print trigger event 
+            run: echo "the jop trigger by ${{github.event_name}}."
+            - name:print os runner
+            run: echo "the runner  ${{runner.os}}."
+          - name: Check out repository code action
+            uses: actions/checkout@v4
+          - run: echo " Cloning The ${{ github.repository }} repository "
+          - name: List files in the repository
+            run: ls ${{ github.workspace}}
